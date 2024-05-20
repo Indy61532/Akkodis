@@ -1,10 +1,42 @@
-*{   
-    font-family: "Poetsen One", sans-serif;
+:root {
+    /*Akkodis barvy*/
+    --blue: #002a41;
+    --white: #f7f7f7;
+    --yellow: #ffb81c;
+    --gray: #999;
+    --dark-gray: #414141;
+}
+
+*{
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-style: normal;  
-    color: #ececec;
+    font-style: normal;
+    color: var(--white);
 }
 
 body{
-    background-color: rgb(22, 22, 22);
+    background-color: var(--blue);
+}
+
+.img_container{
+    background-color: var(--white);
+    width: 12rem;
+    height: 5rem;
+    border-radius: 2rem;
+    margin: auto;
+    position: relative;
+
+}
+
+img{
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
