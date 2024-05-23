@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Style.css">
+</head>
+<body>
+    <div id="intro">
+        <img id="logo" src="/Images/output-onlinepngtools.png" alt="">
+        <img id="planeto" src="/Images/0000-1000-ezgif.com-video-to-gif-converter (1).gif" alt="">
+        <button></button>
+    </div>
+
+    <div id="main">
+        
+    </div>
+
+    <script>
+        function toggleVisibility() {
+            const firstStep = document.getElementById('intro');
+            const main = document.getElementById('main');
+
+            firstStep.classList.add('hidden');
+
+            setTimeout(() => {
+                main.classList.add('visible');
+            }, 1000);
+        }
+
+        document.addEventListener('click', toggleVisibility);
+        document.addEventListener('keydown', toggleVisibility);
+    </script>
+</body> 
+</html>
