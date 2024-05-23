@@ -1,19 +1,22 @@
-body{
-margin:0;
-background-color: rgb(0, 0, 0);
-
+body {
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f7f7f7;
 }
 
-/*Style Intro*/
+/* Style Intro */
 
-#intro{
-    display:flex;
+#intro {
+    display: flex;
     height: 100vh;
     width: 100%;
     justify-content: center;
     position: absolute;
     align-items: center;
-    visibility: visible;
+    visibility: hidden;
     opacity: 1;
     transition: opacity 1s ease-out, visibility 1s ease-out;
 }
@@ -23,30 +26,26 @@ background-color: rgb(0, 0, 0);
     visibility: hidden;
 }
 
-#logo{
-z-index: 2;
-width: 50%;
-position: absolute;
+#logo {
+    z-index: 2;
+    width: 50%;
+    position: absolute;
 }
 
-#planeto{
-width: 14%;
-position: absolute;
-margin-left: 3%;
-
+#planeto {
+    width: 14%;
+    position: absolute;
+    margin-left: 3%;
 }
 
-#main{
-    display:flex;
+#main {
     height: 100vh;
     width: 100%;
-    justify-content: center;
     position: absolute;
-    align-items: center;
     visibility: hidden;
     opacity: 0;
     transition: opacity 1s ease-in, visibility 1s ease-in;
-    background-color: chartreuse;
+    background-color: rgb(72, 88, 161);
 }
 
 #main.visible {
@@ -54,7 +53,53 @@ margin-left: 3%;
     visibility: visible;
 }
 
-/*Style Intro*/
+/* Style Intro */
 
-/*2D Map*/
+/* 2D Map */
+
+#navbar {
+    padding: 0.7% 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #002a41;
+    border-bottom: 0.8vh solid #ffb81c;
+}
+
+#navbar a {
+    position: absolute;
+    left: 5%;
+}
+
+#navbar div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#map{
+    width: 100%;
+}
+
+#footer{
+    padding: 0.7% 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #414141;
+    border-top: 0.8vh solid #ffb81c;
+    gap: 2vw;
+}
+
+#footer img{
+    height: 1vw;
+}
 
