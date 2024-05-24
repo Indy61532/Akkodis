@@ -38,16 +38,6 @@ body {
     margin-left: 3%;
 }
 
-#main {
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 1s ease-in, visibility 1s ease-in;
-    background-color: rgb(72, 88, 161);
-}
-
 #main.visible {
     opacity: 1;
     visibility: visible;
@@ -56,6 +46,17 @@ body {
 /* Style Intro */
 
 /* 2D Map */
+
+#main {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease-in, visibility 1s ease-in;
+    background-color: rgb(72, 88, 161);
+    overflow: hidden;
+}
 
 #navbar {
     padding: 1vh 0;
@@ -95,10 +96,20 @@ a:visited {
     font-size: 1.5rem;
 }
 
-#map {
-    margin-top: calc(2.0rem + 2vh);    /*height of navbar + 2*padding*/
+#map-container {
     width: 100%;
-    margin-bottom: calc(1.5rem + 2vh);    /*height of footer + 2*padding*/
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+#map {
+    /*height of navbar + 2*padding*/
+    margin-top: calc(2.0rem + 2vh);
+    /*height of footer + 2*padding*/
+    margin-bottom: calc(1.5rem + 2vh);
+    /*100vh - (margins + 1vh)*/
+    height: calc(100vh - 2rem - 1.5rem - 5vh);
 }
 
 #footer {
