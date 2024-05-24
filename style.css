@@ -58,7 +58,7 @@ body {
 /* 2D Map */
 
 #navbar {
-    padding: 0.7% 0;
+    padding: 1vh 0;
     position: fixed;
     top: 0;
     width: 100%;
@@ -67,27 +67,42 @@ body {
     justify-content: center;
     background-color: #002a41;
     border-bottom: 0.8vh solid #ffb81c;
+    height: 2rem;
 }
 
-#navbar a {
+a:link {
+    text-decoration: none;
+    color: #f7f7f7;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #f7f7f7;
+}
+
+#navbar-img {
     position: absolute;
     left: 5%;
+    height: 2rem;
 }
 
-#navbar div:nth-child(2) {
+#navbar-text {
     display: flex;
     justify-content: center;
     width: 100%;
     font-size: 1.5rem;
     text-align: center;
+    font-size: 1.5rem;
 }
 
-#map{
+#map {
+    margin-top: calc(2.0rem + 2vh);    /*height of navbar + 2*padding*/
     width: 100%;
+    margin-bottom: calc(1.5rem + 2vh);    /*height of footer + 2*padding*/
 }
 
-#footer{
-    padding: 0.7% 0;
+#footer {
+    padding: 1vh 0;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -97,9 +112,9 @@ body {
     background-color: #414141;
     border-top: 0.8vh solid #ffb81c;
     gap: 2vw;
+    height: 1.5rem;
 }
 
-#footer img{
-    height: 1vw;
+#footer img {
+    height: 1rem;
 }
-
