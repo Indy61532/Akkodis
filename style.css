@@ -134,3 +134,10 @@ a:visited {
 #footer img {
     height: 1rem;
 }
+
+/*when screen is smaller than 500px, hide navbar img*/
+@media only screen and (max-width: 500px) {
+    #navbar-img{
+        visibility: hidden;
+    }
+}
