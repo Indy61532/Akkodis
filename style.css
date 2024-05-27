@@ -83,7 +83,7 @@ a:visited {
 
 #navbar-img {
     position: absolute;
-    left: 5%;
+    left: 10px;
     height: 2rem;
 }
 
@@ -125,6 +125,10 @@ a:visited {
     border-top: 0.8vh solid #ffb81c;
     gap: 2vw;
     height: 1.5rem;
+}
+
+#link3d{
+    border: #ffb81c 2px solid;
 }
 
 #footer img {
