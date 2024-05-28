@@ -5,6 +5,8 @@ body {
     font-weight: 400;
     font-style: normal;
     color: #f7f7f7;
+    left: 0;
+    right: 0;
 }
 
 /* Style Intro */
@@ -16,7 +18,8 @@ body {
     justify-content: center;
     position: absolute;
     align-items: center;
-    visibility: hidden; /*change to visible*/
+    visibility: visible;
+    opacity: 1;
     transition: opacity 1s ease-out, visibility 1s ease-out;
 }
 
@@ -37,6 +40,16 @@ body {
     margin-left: 3%;
 }
 
+#main {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease-in, visibility 1s ease-in;
+    background-color: rgb(72, 88, 161);
+}
+
 #main.visible {
     opacity: 1;
     visibility: visible;
@@ -46,18 +59,8 @@ body {
 
 /* 2D Map */
 
-#main {
-    height: 100vh;
-    width: 100%;
-    position: absolute; 
-    visibility: visible;/*change to hidden*/
-    transition: opacity 1s ease-in, visibility 1s ease-in;
-    background-color: rgb(72, 88, 161);
-    overflow: hidden;
-}
-
 #navbar {
-    padding: 1vh 0;
+    padding: 0.7% 0;
     position: fixed;
     top: 0;
     width: 100%;
@@ -66,53 +69,27 @@ body {
     justify-content: center;
     background-color: #002a41;
     border-bottom: 0.8vh solid #ffb81c;
-    height: 2rem;
 }
 
-a:link {
-    text-decoration: none;
-    color: #f7f7f7;
-}
-
-a:visited {
-    text-decoration: none;
-    color: #f7f7f7;
-}
-
-#navbar-img {
+#navbar a {
     position: absolute;
-    left: 10px;
-    height: 2rem;
+    left: 5%;
 }
 
-#navbar-text {
+#navbar div:nth-child(2) {
     display: flex;
     justify-content: center;
     width: 100%;
     font-size: 1.5rem;
     text-align: center;
-    font-size: 1.5rem;
 }
 
-#map-container {
+#map{
     width: 100%;
-    height: 100%;
-    overflow-y: hidden;
-    overflow-x: auto;
-    text-align: center;
 }
 
-#map {
-    /*height of navbar + 2*padding*/
-    margin-top: calc(2.0rem + 2vh);
-    /*height of footer + 2*padding*/
-    margin-bottom: calc(1.5rem + 2vh);
-    /*100vh - (margins + 1vh)*/
-    height: calc(100vh - 2rem - 1.5rem - 5vh);
-}
-
-#footer {
-    padding: 1vh 0;
+#footer{
+    padding: 0.7% 0;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -122,20 +99,23 @@ a:visited {
     background-color: #414141;
     border-top: 0.8vh solid #ffb81c;
     gap: 2vw;
-    height: 1.5rem;
 }
 
-#link3d{
-    border: #ffb81c 2px solid;
+#footer img{
+    height: 1vw;
 }
 
-#footer img {
-    height: 1rem;
-}
+/* 2D Map */
 
-/*when screen is smaller than 500px, hide navbar img*/
-@media only screen and (max-width: 500px) {
-    #navbar-img{
-        visibility: hidden;
-    }
+/* 3D Map */
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
 }
