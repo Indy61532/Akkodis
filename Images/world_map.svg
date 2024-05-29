@@ -3589,27 +3589,34 @@
 	<path style="fill:none;fill-opacity:0.0329218;stroke-width:3;stroke-opacity:1;stroke-linejoin:round;stroke-linecap:round" d="m 2.9633136,316.08679 533.3964564,-53.33965 -49.38856,24.69428 -28.64537,34.572 -15.80434,53.33964 14.81657,34.57199 41.48639,8.88994 49.38856,-47.41301 42.47417,76.05838 54.32741,-98.77712 12.84103,28.64536 16.79211,29.63314 22.71874,22.71874 41.48639,-33.58422 30.62091,-40.49862 -3.95109,-46.42525 485.98341,94.82604 -7.5493,-46.9109 36.6691,-6.98459 33.1098,-41.17749 45.1177,-16.27083 -28.6369,-17.11226 11.1754,-14.31842 -46.0983,-38.41529 73.3382,-63.90906 52.7337,-4.88922 -34.2245,27.23993 -0.3492,22.69994 3.1431,39.8122 16.0957,23.49141" pathLength="1" id="path3" inkscape:label="west_line" class="west_line"/>
 	<style id="style_css_sheet" type="text/css">
 
-  .east_line {
-  stroke: #414141;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: dash 15s linear forwards;
-  }
+	.east_line {
+	stroke: #ffb81c;
+	stroke-dasharray: 1;
+	stroke-dashoffset: 1;
+	animation: dash_east 15s linear infinite;
+	}
 
-  .west_line {
-  stroke: #414141;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: dash 15s linear forwards;
-  }
-
-  @keyframes dash {
-  from {
-    stroke-dashoffset: 1;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+	.west_line {
+	stroke: #ffb81c;
+	stroke-dasharray: 1;
+	stroke-dashoffset: 0;
+	animation: dash_west 15s linear infinite;
+	}
+	@keyframes dash_east {
+	from {
+		stroke-dashoffset: 1;
+	}
+	to {
+		stroke-dashoffset: -1;
+	}
+}
+	@keyframes dash_west {
+	from {
+		stroke-dashoffset: 0;
+	}
+	to {
+		stroke-dashoffset: -2;
+	}
 }
 
 		/*
