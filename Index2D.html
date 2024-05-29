@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,30 +11,45 @@
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div id="intro">
-        <img id="logo" src="/Images/Akkodis-intro.png" alt="">
-        <img id="planeto" src="/Images/Planet.gif" alt="">
+        <img id="logo" src="Images/Akkodis-intro.png" alt="">
+        <img id="planeto" src="Images/Planet.gif" alt="">
     </div>
 
     <div id="main">
         <div id="navbar">
-            <a href="https://www.akkodis.com"><img src="/Images/Akkodis-navbar.png" alt=""></a>
-            <div>Text</div>
+            <a id="navbar-img" href="https://www.akkodis.com">
+                <img src="Images/Akkodis-navbar.png" alt="Logo Akkodis">
+            </a>
+            <div id="navbar-text">0/62726 km</div>
         </div>
 
-        <div id="2d-map">
-            <img id="map" src="/Images/world_map.svg" alt="">
-            <a href=""><img src="" alt=""></a>
+        <div id="map-container">
+            <img id="map" src="Images/world_map.svg" alt="Mapa Světa">
         </div>
 
-        <div id="footer">
-            <img src="/Images/social/fb.svg" alt="">
-            <img src="/Images/social/instagram.svg" alt="">
-            <img src="/Images/social/linkedin.svg" alt="">
-            <img src="/Images/social/nntb.svg" alt="">
-            <img src="/Images/social/youtube.svg" alt="">
-        </div>
+        <nav id="footer">
+            <a href="https://www.facebook.com/AkkodisCZ">
+                <img src="Images/social/fb.svg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/akkodis_cz/">
+                <img src="Images/social/instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/company/79383535">
+                <img src="Images/social/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://www.nntb.cz/c/y8ib0ra3">
+                <img src="Images/social/nntb.svg" alt="NNTB">
+            </a>
+            <a href="https://www.youtube.com/@Akkodis">
+                <img src="Images/social/youtube.svg" alt="Youtube">
+            </a>
+            <a href="Index3D.html">
+                <img src="Images/Planet.gif" alt="3d planet gif" id="link3d">
+            </a>
+        </nav>
     </div>
 
     <script>
@@ -50,6 +66,7 @@
 
         document.addEventListener('click', toggleVisibility);
         document.addEventListener('keydown', toggleVisibility);
-    </script> 
-</body> 
+    </script>
+</body>
+
 </html>
