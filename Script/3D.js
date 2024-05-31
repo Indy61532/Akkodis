@@ -72,7 +72,7 @@ let model;
 let mixer; // Přidáme proměnnou pro animační mixer
 const clock = new THREE.Clock(); // Přidáme hodiny pro animační mixer
 
-loader.load('/Images/planet2.gltf', function (gltf) {
+loader.load('Images/planet2.gltf', function (gltf) {
     model = gltf.scene;
     console.log('Model loaded successfully:', model);
     scene.add(model);
